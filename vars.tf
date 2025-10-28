@@ -15,3 +15,7 @@ variable "tags" {
     Name = "raj-fiap-terraform-aula"
   }
 }
+
+variable "instante_type" {
+  default = "t3.micro"
+}

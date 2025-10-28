@@ -1,7 +1,7 @@
-# terraform {
-#   backend "s3" {
-#     bucket = aws_s3_bucket.bucket_backend
-#     key    = "raj-fiap-terraform-aula-08-backend-key"
-#     region = "sa-east-1"
-#   }
-# }
+terraform {
+  backend "s3" {
+    bucket = "raj-fiap-terraform-aula-08"
+    key    = "fiap-aula-08/terraform.tfstate"
+    region = "sa-east-1"
+  }
+}
