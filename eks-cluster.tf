@@ -9,8 +9,10 @@ resource "aws_eks_cluster" "eks" {
   version  = "1.31"
 
   vpc_config {
-    subnet_ids = aws_subnet.subnet_public[*].id
+    subnet_ids         = aws_subnet.subnet_public[*].id
+    security_group_ids = [aws_security_group.sg.id]
   }
+
 
   # Ensure that IAM Role permissions are created before and deleted
   # after EKS Cluster handling. Otherwise, EKS will not be able to
